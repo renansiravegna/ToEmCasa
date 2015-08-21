@@ -1,9 +1,9 @@
-body {
-	background-color: "#072A3A";
-}
-
 .centro {
 	text-align: center;
+}
+
+.invisivel {
+	display: none !important;
 }
 
 .grade-de-botoes div {
@@ -17,14 +17,25 @@ body {
 	border-radius: 20px;
 }
 
-.grade-de-botoes .atender {
+.botoes div {
+	width: 100%;
+	height: 130px;
+	margin: 2px;
+	background-color: #C6C6C6;
+	display: inline-block;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+
+.atender {
 	background-image: url('../img/camera.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 50%;
 }
 
-.grade-de-botoes .atendido {
+.atendido {
 	background-image: url('../img/camera-off.png');
 	background-repeat: no-repeat;
 	background-position: center;
@@ -32,35 +43,42 @@ body {
 	background-color: #5F6466;
 }
 
-.grade-de-botoes .mudo {
+.falar {
+	background-image: url('../img/som-off.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 30%;
+}
+
+.parar-de-falar {
 	background-image: url('../img/som.png');
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 50%;
+	background-size: 30%;
 }
 
-.grade-de-botoes .abrir-portao {
+.abrir-portao {
 	background-image: url('../img/chave.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 50%;
 }
 
-.grade-de-botoes .ligar-as-luzes {
+.ligar-as-luzes {
 	background-image: url('../img/luz.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 40%;
 }
 
-.grade-de-botoes .disparar-alarme {
+.disparar-alarme {
 	background-image: url('../img/alarme.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 50%;
 }
 
-.grade-de-botoes .policia {
+.policia {
 	background-image: url('../img/policia.png');
 	background-repeat: no-repeat;
 	background-position: center;

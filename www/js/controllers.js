@@ -1,19 +1,39 @@
 angular.module('starter.controllers', [])
 
-.controller('CameraCtrl', function($scope) {
+.controller('CameraCtrl', function($scope, $timeout, $cordovaFileTransfer) {
 	$scope.atender = function($event) {
 		var estadoAtual = $event.currentTarget.className;
 		var video = document.getElementById('video');
 
-		if (estadoAtual.indexOf('atendido') > -1){
+		if (estadoAtual.indexOf('atendido') > -1) {
 			video.pause();
 			$event.currentTarget.className = estadoAtual.replace('atendido', 'atender');
-		}
-		else {
+		} else {
 			video.play();
 			$event.currentTarget.className = estadoAtual.replace('atender', 'atendido');
 		}
-	}
+	};
+
+	$scope.falar = function() {
+		window.microfone.gravar();
+		window.sandbox.selecionar('div.falar').removerClass('falar').adicionarClass('parar-de-falar');
+	};
+
+	$scope.pararDeFalar = function() {
+		window.microfone.parar();
+		window.microfone.exibirUltimoAudio();
+		window.sandbox.selecionar('div.parar-de-falar').removerClass('parar-de-falar').adicionarClass('falar');
+
+		var server = 'http://192.168.0.150:5000/';
+		var option = {};
+		var aceitarCertificados = true;
+
+		$cordovaFileTransfer.upload(server, window.microfone.obterUltimoAudio(), option, aceitarCertificados).then(function(result) {
+			console.log('Arquivo enviado com sucesso');
+		}, function(err) {
+			console.log('Upload falhou');
+		});
+	};
 })
 
 .controller('ConfigCtrl', function($scope) {})

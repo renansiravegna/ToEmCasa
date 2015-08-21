@@ -1,18 +1,20 @@
 <ion-view view-title="Tô em casa">
 	<ion-content>
 		<div class="centro">
-			<video id="video" class="camera" width="320" height="240" preload>
-				<source src="midias/video.mp4" type="video/mp4"/>
-			</video>
+			<!-- <img alt="http://200.163.33.178:8099/" src="http://200.163.33.178:8099/" />
+			-->
 		</div>
 
 		<div class="centro grade-de-botoes">
 			<div class="atender" ng-click="atender($event)"></div>
-			<div class="mudo" ng-click=""></div>
 			<div class="abrir-portao" ng-click=""></div>
 			<div class="ligar-as-luzes" ng-click=""></div>
 			<div class="disparar-alarme" ng-click=""></div>
 			<div class="policia" ng-click=""></div>
+		</div>
+
+		<div class="centro botoes">
+			<div class="falar" on-hold="falar()" on-release="pararDeFalar()"></div>
 		</div>
 	</ion-content>
 </ion-view>

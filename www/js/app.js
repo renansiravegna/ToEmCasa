@@ -40,6 +40,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 		}
 	})
 
+	.state('app.configuracoes', {
+		url: '/configuracoes',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/configuracoes.html',
+				controller: 'ConfigCtrl'
+			}
+		}
+	})
+
 	.state('app.search', {
 		url: '/search',
 		views: {
@@ -77,6 +87,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 			}
 		}
 	});
-	
+
 	$urlRouterProvider.otherwise('/app/camera');
 });

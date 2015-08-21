@@ -1,11 +1,22 @@
 angular.module('starter.controllers', [])
 
 .controller('CameraCtrl', function($scope) {
-	$scope.atender = function() {
+	$scope.atender = function($event) {
+		var estadoAtual = $event.currentTarget.className;
 		var video = document.getElementById('video');
-		video.play();
+
+		if (estadoAtual.indexOf('atendido') > -1){
+			video.pause();
+			$event.currentTarget.className = estadoAtual.replace('atendido', 'atender');
+		}
+		else {
+			video.play();
+			$event.currentTarget.className = estadoAtual.replace('atender', 'atendido');
+		}
 	}
 })
+
+.controller('ConfigCtrl', function($scope) {})
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 

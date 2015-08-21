@@ -1,1 +1,72 @@
-/* Empty. Add your own CSS if you like */
+body {
+	background-color: "#072A3A";
+}
+
+.centro {
+	text-align: center;
+}
+
+.grade-de-botoes div {
+	width: 40%;
+	height: 130px;
+	margin: 2px;
+	background-color: #C6C6C6;
+	display: inline-block;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+
+.grade-de-botoes .atender {
+	background-image: url('../img/camera.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 50%;
+}
+
+.grade-de-botoes .atendido {
+	background-image: url('../img/camera-off.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 50%;
+	background-color: #5F6466;
+}
+
+.grade-de-botoes .mudo {
+	background-image: url('../img/som.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 50%;
+}
+
+.grade-de-botoes .abrir-portao {
+	background-image: url('../img/chave.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 50%;
+}
+
+.grade-de-botoes .ligar-as-luzes {
+	background-image: url('../img/luz.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 40%;
+}
+
+.grade-de-botoes .disparar-alarme {
+	background-image: url('../img/alarme.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 50%;
+}
+
+.grade-de-botoes .policia {
+	background-image: url('../img/policia.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 50%;
+}
+
+ion-content {
+	background-color: #072A3A;
+}

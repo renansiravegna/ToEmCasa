@@ -31,6 +31,7 @@ window.sandbox = (function() {
 	self.removerClass = function(nomeDaClass) {
 		self.map(function(elemento) {
 			elemento.className = elemento.className.replace(' ' + nomeDaClass, '');
+			elemento.className = elemento.className.replace(nomeDaClass, '');
 		});
 		return self;
 	};

@@ -1,6 +1,8 @@
 angular.module('starter.controllers', [])
 
-.controller('CameraCtrl', function($scope, $timeout, $cordovaFileTransfer) {
+.controller('CameraCtrl', function($scope, $timeout, $cordovaFileTransfer, $http) {
+	window.central.http = $http;
+
 	$scope.atender = function($event) {
 		var estadoAtual = $event.currentTarget.className;
 		var video = document.getElementById('video');
@@ -21,7 +23,6 @@ angular.module('starter.controllers', [])
 
 	$scope.pararDeFalar = function() {
 		window.microfone.parar();
-
 	};
 
 	function falaCompleta() {
@@ -42,6 +43,19 @@ angular.module('starter.controllers', [])
 			console.log(err);
 		});
 	}
+
+	$scope.abrirPortao = function() {
+		window.central.abrirPortao();
+	};
+
+	$scope.ligarLuzes = function() {
+		window.central.alternarLuz();
+
+		if (window.central.luzEstaLigada())
+			window.sandbox.selecionar('div.ligar-as-luzes').removerClass('ligar-as-luzes').adicionarClass('luzes-ligadas');
+		else
+			window.sandbox.selecionar('div.luzes-ligadas').removerClass('luzes-ligadas').adicionarClass('ligar-as-luzes');
+	};
 })
 
 .controller('ConfigCtrl', function($scope) {})

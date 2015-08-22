@@ -3,9 +3,9 @@ window.microfone = (function() {
 	var _ultimoAudio;
 	var _mediaAtiva;
 
-	self.gravar = function() {
+	self.gravar = function(callbackDeSucesso) {
 		_ultimoAudio = new Date().getTime() + ".wav";
-		_mediaAtiva = criarMedia(_ultimoAudio);
+		_mediaAtiva = criarMedia(_ultimoAudio, callbackDeSucesso);
 		_mediaAtiva.startRecord();
 	};
 
@@ -22,16 +22,22 @@ window.microfone = (function() {
 		return _ultimoAudio;
 	};
 
-	function criarMedia(nomeDoAudio) {
-		return new Media(nomeDoAudio, sucesso, falha);
+	function criarMedia(nomeDoAudio, callbackDeSucesso) {
+		return new Media(nomeDoAudio, function() {
+			sucesso(callbackDeSucesso);
+		}, falha);
 	}
 
-	function sucesso() {
-		console.log("Audio gravado com sucesso");
+	function sucesso(callback) {
+		if (callback)
+			callback();
+
+		console.log("Sucesso na operação com media");
 	}
 
-	function falha() {
+	function falha(err) {
 		console.log("Falha ao gravar o audio");
+		console.log(err);
 	}
 
 	return self;

@@ -15,25 +15,33 @@ angular.module('starter.controllers', [])
 	};
 
 	$scope.falar = function() {
-		window.microfone.gravar();
+		window.microfone.gravar(falaCompleta);
 		window.sandbox.selecionar('div.falar').removerClass('falar').adicionarClass('parar-de-falar');
 	};
 
 	$scope.pararDeFalar = function() {
 		window.microfone.parar();
+
+	};
+
+	function falaCompleta() {
 		window.microfone.exibirUltimoAudio();
 		window.sandbox.selecionar('div.parar-de-falar').removerClass('parar-de-falar').adicionarClass('falar');
 
 		var server = 'http://192.168.0.150:5000/';
+		var arquivo = '/storage/emulated/0/' + window.microfone.obterUltimoAudio();
 		var option = {};
 		var aceitarCertificados = true;
 
-		$cordovaFileTransfer.upload(server, window.microfone.obterUltimoAudio(), option, aceitarCertificados).then(function(result) {
+		console.log(arquivo);
+
+		$cordovaFileTransfer.upload(server, arquivo, option, aceitarCertificados).then(function(result) {
 			console.log('Arquivo enviado com sucesso');
 		}, function(err) {
 			console.log('Upload falhou');
+			console.log(err);
 		});
-	};
+	}
 })
 
 .controller('ConfigCtrl', function($scope) {})

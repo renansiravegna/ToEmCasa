@@ -8,8 +8,23 @@
 	font-size: 25px !important;
 }
 
+.logo {
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.logo img {
+	width: 90%;
+}
+
 .centro {
 	text-align: center;
+}
+
+.divisor {
+	margin-bottom: 35px;
+	width: 90%;
 }
 
 .invisivel {
@@ -32,12 +47,29 @@
 	display: inline-block;
 }
 
-.grade-de-locais div {
-	height: 130px;
-	margin: 2px;
+.local {
 	background-color: #C6C6C6;
-	display: inline-block;
+	padding: 5px;
 	vertical-align: top;
+	width: 90%;
+	margin: 0 auto;
+	margin-bottom: 5px;
+	color: white;
+}
+
+.local img {
+	width: 60px;
+	display: inline-block;
+}
+
+.local span {
+	width: 70%;
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+	margin-left: 20px;
+	margin-top: 20px;
+	font-size: 35px;
 }
 
 .grade-de-nome div {
@@ -59,18 +91,21 @@
 }
 
 .icone {
-	width: 30%;
+	background-image: url('../img/icone-logo.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 20%;
+}
+
+.descricao {
+	width: 70%;
+	padding-top: 35px;
+	font-size: 35px;
 }
 
 .camera {
 	margin-top: 20px;
 	margin-bottom: 20px;
-}
-
-.descricao {
-	width: 60%;
-	padding-top: 50px;
-	font-size: 35px;
 }
 
 .grade-de-botoes div {
@@ -79,13 +114,13 @@
 	margin: 2px;
 	background-color: #C6C6C6;
 	display: inline-block;
-	-webkit-border-radius: 20px;
-	-moz-border-radius: 20px;
-	border-radius: 20px;
+	background-size: 30%;
+	background-repeat: no-repeat;
+	background-position: left;
 }
 
-.botoes div {
-	width: 100%;
+.botoes-largos div {
+	width: 90%;
 	height: 130px;
 	margin: 2px;
 	background-color: #C6C6C6;
@@ -95,68 +130,40 @@
 	border-radius: 20px;
 }
 
+.falar {
+}
+
 .atender {
 	background-image: url('../img/camera.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 50%;
 }
 
 .atendido {
 	background-image: url('../img/camera-off.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 50%;
 	background-color: #5F6466;
-}
-
-.falar {
-	background-image: url('../img/som-off.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 30%;
 }
 
 .parar-de-falar {
 	background-image: url('../img/som.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 30%;
 }
 
 .abrir-portao {
 	background-image: url('../img/chave.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 50%;
 }
 
 .ligar-as-luzes {
 	background-image: url('../img/luz-off.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 70%;
 }
 
 .luzes-ligadas {
 	background-image: url('../img/luz.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 40%;
 }
 
 .disparar-alarme {
 	background-image: url('../img/alarme.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 50%;
 }
 
 .policia {
 	background-image: url('../img/policia.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 50%;
 }
 
 ion-content {

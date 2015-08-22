@@ -1,13 +1,21 @@
 <ion-view view-title="Estou em casa">
 	<ion-content>
-		<div class="centro logo"></div>
+		<div class="logo">
+			<img src="img/logo.png" alt="Estou em casa" />
+		</div>
 
-		<div class="centro grade-de-locais">
-			<div class="icone"></div>
-			<div class="descricao" ng-click="visualizar()">CASA</div>
+		<hr class="divisor" />
 
-			<div class="icone"></div>
-			<div class="descricao">ESCRITÓRIO</div>
+		<div class="centro">
+			<div class="local" ng-click="visualizar()">
+				<img src="img/icone-logo.png" alt="" />
+				<span>CASA</span>
+			</div>
+
+			<div class="local">
+				<img src="img/icone-logo.png" alt="" />
+				<span ng-click="visualizar()">ESCRITÓRIO</span>
+			</div>
 		</div>
 	</ion-content>
 </ion-view>

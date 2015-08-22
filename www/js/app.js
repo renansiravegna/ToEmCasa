@@ -60,5 +60,5 @@ angular.module('starter', ['ngCordova', 'ionic', 'starter.controllers'])
 		}
 	});
 
-	$urlRouterProvider.otherwise('/app/camera');
+	$urlRouterProvider.otherwise('/app/locais');
 });

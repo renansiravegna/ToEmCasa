@@ -121,14 +121,18 @@
 }
 
 .botoes-largos div {
-	width: 90%;
+	width: 82%;
 	height: 130px;
 	margin: 2px;
-	background-color: #C6C6C6;
+	background-color: #284367;
+	background-repeat: no-repeat;
+	background-position: 10px;
 	display: inline-block;
-	-webkit-border-radius: 20px;
-	-moz-border-radius: 20px;
-	border-radius: 20px;
+	vertical-align: top;
+	padding-top: 50px;
+	padding-left: 60px;
+	font-size: 30px;
+	color: white;
 }
 
 .capturar-imagem {
@@ -157,6 +161,7 @@
 }
 
 .falar {
+	background-image: url('../img/icone-falar.png');
 }
 
 .parar-de-falar {

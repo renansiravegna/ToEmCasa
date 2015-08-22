@@ -48,7 +48,7 @@
 }
 
 .local {
-	background-color: #C6C6C6;
+	background-color: #284367;
 	padding: 5px;
 	vertical-align: top;
 	width: 90%;
@@ -72,17 +72,30 @@
 	font-size: 35px;
 }
 
-.grade-de-nome div {
-	height: 50px;
-	margin: 2px;
-	background-color: #C6C6C6;
-	display: inline-block;
-	vertical-align: top;
+.camera-do-local {
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 30px;
 }
 
-.grade-de-nome .descricao {
-	padding-top: 12px;
-	background-color: transparent;
+.camera-do-local img {
+	background-color: #284367;
+	width: 60px;
+	display: inline-block;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	padding: 8px;
+}
+
+.camera-do-local span {
+	width: 70%;
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+	margin-left: 20px;
+	margin-top: 20px;
+	font-size: 35px;
 	color: white;
 }
 

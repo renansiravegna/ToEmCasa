@@ -99,23 +99,6 @@
 	color: white;
 }
 
-.logo-pequena {
-	width: 100px;
-}
-
-.icone {
-	background-image: url('../img/icone-logo.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	width: 20%;
-}
-
-.descricao {
-	width: 70%;
-	padding-top: 35px;
-	font-size: 35px;
-}
-
 .camera {
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -123,13 +106,18 @@
 
 .grade-de-botoes div {
 	width: 40%;
-	height: 130px;
+	height: 100px;
 	margin: 2px;
-	background-color: #C6C6C6;
+	background-color: #284367;
 	display: inline-block;
 	background-size: 30%;
 	background-repeat: no-repeat;
-	background-position: left;
+	background-position: 10px;
+	color: white;
+	font-size: 20px;
+	vertical-align: top;
+	padding-top: 30px;
+	padding-left: 45px;
 }
 
 .botoes-largos div {
@@ -143,40 +131,36 @@
 	border-radius: 20px;
 }
 
-.falar {
-}
-
-.atender {
-	background-image: url('../img/camera.png');
-}
-
-.atendido {
-	background-image: url('../img/camera-off.png');
+.capturar-imagem {
+	background-image: url('../img/icone-camera.png');
 	background-color: #5F6466;
+}
+
+.desligar-audio {
+	background-image: url('../img/icone-audio.png');
+}
+
+.ligar-luz {
+	background-image: url('../img/icone-luz.png');
+}
+
+.abrir-portao {
+	background-image: url('../img/icone-chave.png');
+}
+
+.disparar-alarme {
+	background-image: url('../img/icone-alarme.png');
+}
+
+.chamada-de-emergencia {
+	background-image: url('../img/icone-190.png');
+}
+
+.falar {
 }
 
 .parar-de-falar {
 	background-image: url('../img/som.png');
-}
-
-.abrir-portao {
-	background-image: url('../img/chave.png');
-}
-
-.ligar-as-luzes {
-	background-image: url('../img/luz-off.png');
-}
-
-.luzes-ligadas {
-	background-image: url('../img/luz.png');
-}
-
-.disparar-alarme {
-	background-image: url('../img/alarme.png');
-}
-
-.policia {
-	background-image: url('../img/policia.png');
 }
 
 ion-content {

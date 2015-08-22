@@ -26,8 +26,7 @@ angular.module('starter', ['ngCordova', 'ionic', 'starter.controllers'])
 	$stateProvider.state('app', {
 		url: '/app',
 		abstract: true,
-		templateUrl: 'templates/menu.html',
-		controller: 'AppCtrl'
+		templateUrl: 'templates/menu.html'
 	})
 
 	.state('app.locais', {
@@ -50,15 +49,15 @@ angular.module('starter', ['ngCordova', 'ionic', 'starter.controllers'])
 		}
 	})
 
-	.state('app.configuracoes', {
-		url: '/configuracoes',
+	.state('app.chamada', {
+		url: '/chamada',
 		views: {
 			'menuContent': {
-				templateUrl: 'templates/configuracoes.html',
-				controller: 'ConfigCtrl'
+				templateUrl: 'templates/chamada.html',
+				controller: 'ChamadaCtrl'
 			}
 		}
 	});
 
-	$urlRouterProvider.otherwise('/app/camera');
+	$urlRouterProvider.otherwise('/app/chamada');
 });

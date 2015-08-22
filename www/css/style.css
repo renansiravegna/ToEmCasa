@@ -47,6 +47,12 @@
 	display: inline-block;
 }
 
+.chamando {
+	font-size: 40px;
+	color: white;
+	margin-bottom: 30px;
+}
+
 .local {
 	background-color: #284367;
 	padding: 5px;
@@ -166,6 +172,18 @@
 
 .parar-de-falar {
 	background-image: url('../img/som.png');
+}
+
+.aceitar-chamada {
+	background-image: url('../img/icone-atender.png');
+	background-position: center !important;
+	background-size: 70% !important;
+}
+
+.negar-chamada {
+	background-image: url('../img/icone-recusar.png');
+	background-position: center !important;
+	background-size: 60% !important;
 }
 
 ion-content {

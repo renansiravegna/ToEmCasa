@@ -1,9 +1,76 @@
+@font-face {
+	font-family: 'SCRIPTBL';
+	src: url('SCRIPTBL.ttf') format('truetype');
+}
+
+.title {
+	font-family: 'SCRIPTBL';
+	font-size: 25px !important;
+}
+
 .centro {
 	text-align: center;
 }
 
 .invisivel {
 	display: none !important;
+}
+
+.locais {
+	background-color: white;
+}
+
+.icone {
+	background-color: white;
+	width: 30%;
+	display: inline-block;
+}
+
+.nome {
+	background-color: white;
+	width: 69%;
+	display: inline-block;
+}
+
+.grade-de-locais div {
+	height: 130px;
+	margin: 2px;
+	background-color: #C6C6C6;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.grade-de-nome div {
+	height: 50px;
+	margin: 2px;
+	background-color: #C6C6C6;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.grade-de-nome .descricao {
+	padding-top: 12px;
+	background-color: transparent;
+	color: white;
+}
+
+.logo-pequena {
+	width: 100px;
+}
+
+.icone {
+	width: 30%;
+}
+
+.camera {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.descricao {
+	width: 60%;
+	padding-top: 50px;
+	font-size: 35px;
 }
 
 .grade-de-botoes div {

@@ -30,6 +30,16 @@ angular.module('starter', ['ngCordova', 'ionic', 'starter.controllers'])
 		controller: 'AppCtrl'
 	})
 
+	.state('app.locais', {
+		url: '/locais',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/locais.html',
+				controller: 'LocaisCtrl'
+			}
+		}
+	})
+
 	.state('app.camera', {
 		url: '/camera',
 		views: {
@@ -46,44 +56,6 @@ angular.module('starter', ['ngCordova', 'ionic', 'starter.controllers'])
 			'menuContent': {
 				templateUrl: 'templates/configuracoes.html',
 				controller: 'ConfigCtrl'
-			}
-		}
-	})
-
-	.state('app.search', {
-		url: '/search',
-		views: {
-			'menuContent': {
-				templateUrl: 'templates/search.html'
-			}
-		}
-	})
-
-	.state('app.browse', {
-		url: '/browse',
-		views: {
-			'menuContent': {
-				templateUrl: 'templates/browse.html'
-			}
-		}
-	})
-
-	.state('app.playlists', {
-		url: '/playlists',
-		views: {
-			'menuContent': {
-				templateUrl: 'templates/playlists.html',
-				controller: 'PlaylistsCtrl'
-			}
-		}
-	})
-
-	.state('app.single', {
-		url: '/playlists/:playlistId',
-		views: {
-			'menuContent': {
-				templateUrl: 'templates/playlist.html',
-				controller: 'PlaylistCtrl'
 			}
 		}
 	});

@@ -1,5 +1,11 @@
 angular.module('starter.controllers', [])
 
+.controller('LocaisCtrl', function($scope, $location) {
+	$scope.visualizar = function() {
+		$location.path('/app/camera');
+	};
+})
+
 .controller('CameraCtrl', function($scope, $timeout, $cordovaFileTransfer, $http) {
 	window.central.http = $http;
 

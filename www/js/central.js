@@ -5,16 +5,16 @@ window.central = (function() {
 	self.http = undefined;
 
 	self.abrirPortao = function() {
-		self.http.get('http://192.168.0.150:5000/abrir_portao');
+		self.http.get('http://200.163.33.178:9000/abrir_portao');
 	};
 
 	self.alternarLuz = function() {
 		_luzEstaLigada = !_luzEstaLigada;
 
 		if (_luzEstaLigada)
-			self.http.get('http://192.168.0.150:5000/desligar_luz');
+			self.http.get('http://200.163.33.178:9000/desligar_luz');
 		else
-			self.http.get('http://192.168.0.150:5000/ligar_luz');
+			self.http.get('http://200.163.33.178:9000/ligar_luz');
 
 		console.log('Estado da luz: ', _luzEstaLigada);
 	};

@@ -1,6 +1,11 @@
 angular.module('starter.controllers', [])
 
-.controller('LocaisCtrl', function($scope, $location) {
+.controller('LocaisCtrl', function($scope, $http, $location) {
+	window.central.http = $http;
+	window.central.location = $location;
+
+	window.central.escutarChamada();
+	console.log(1);
 	$scope.visualizar = function() {
 		$location.path('/app/camera');
 	};
@@ -9,9 +14,6 @@ angular.module('starter.controllers', [])
 .controller('CameraCtrl', function($scope, $timeout, $cordovaFileTransfer, $http, $location) {
 	window.central.http = $http;
 	window.central.location = $location;
-
-	$scope.atender = function($event) {
-	};
 
 	$scope.falar = function() {
 		window.microfone.gravar(falaCompleta);
@@ -54,11 +56,14 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ChamadaCtrl', function($scope, $location) {
+
 	$scope.atender = function() {
 		$location.path('/app/camera');
+		// Desfazer chamada
 	};
 
 	$scope.negar = function() {
 		$location.path('/app/locais');
+		// Desfazer chamada
 	};
 });
